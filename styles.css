@@ -43,3 +43,288 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    color: #222222;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: #222222;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: 'Molle', cursive;
+    color: #F6D64A;
+    font-size: 2.5rem;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    color: #F6D64A;
+}
+
+main {
+    padding: 20px;
+}
+
+#intro {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#intro h2 {
+    font-family: 'Molle', cursive;
+    color: #9B26B0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#img-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#plan {
+    background-color: #F6D64A;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#plan h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+#plan div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#plan section {
+    text-align: center;
+}
+
+#plan h4 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+#plan a img {
+    width: 60px;
+}
+
+#testimonials {
+    padding: 40px 20px;
+    background-color: #EAEAEA;
+    text-align: center;
+}
+
+#testimonials h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #9B26B0;
+}
+
+#testimonials div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#testimonials section {
+    text-align: left;
+}
+
+#testimonials img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#testimonials h4 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #499BD2;
+}
+
+#testimonials p {
+    color: #222222;
+}
+
+#about {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #9B26B0;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+#about section {
+    text-align: center;
+}
+
+#about img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#about h4 {
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #000000;
+}
+
+#contact {
+    background-color: #F6D64A;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input, #contact select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact input[type="submit"] {
+    background-color: #55BCD5;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #499BD2;
+}
+
+footer {
+    background-color: #222222;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #F6D64A;
+}
+
+@media (min-width: 600px) {
+    #img-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #testimonials div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        justify-content: space-between;
+        padding: 30px 60px;
+    }
+
+    #intro p {
+        max-width: 70%;
+    }
+
+    #about div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #testimonials div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
